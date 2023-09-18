@@ -3,14 +3,79 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="styles/main.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css" />
 
   <title>Library</title>
 </head>
 
-<body>
+<body class="font-montserrat bg-gray-900 text-gray-100 h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="bg-gray-800 py-6 px-8 flex-shrink-0 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-4xl font-extrabold tracking-wide">Library</h1>
+      <!-- Moved the Add Book button to the header for better positioning -->
+      <button id="openModalBtn"
+        class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">+ Add Book</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 overflow-y-auto px-8 py-6">
+    <!-- Books Container -->
+    <div id="booksContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Sample book card (for structure) -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-sm transition-transform transform hover:scale-105">
+        <h3 class="text-2xl mb-1 font-semibold">Example book</h3>
+        <p class="text-gray-400 mb-2 italic">By Author</p>
+        <p class="text-gray-500 mb-4">Book description goes here...</p>
+        <div class="flex justify-between items-center mt-4">
+          <div>
+            <p><span class="text-gray-400">Pages:</span> 123</p>
+            <p><span class="text-gray-400">Read:</span> Yes</p>
+          </div>
+          <button
+            class="bg-red-700 text-gray-200 px-3 py-1 rounded hover:bg-red-600 transition duration-300">Delete</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal for Adding -->
+  <div id="modal"
+    class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 hidden">
+    <div class="bg-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-1/2 text-black">
+      <h2 class="text-2xl mb-4 font-bold">+ Add a Book</h2>
+      <form id="addBookForm" class="space-y-4">
+        <input type="text" placeholder="Title" id="bookTitle" class="p-2 w-full rounded border border-gray-500"
+          required>
+        <input type="text" placeholder="Author" id="bookAuthor" class="p-2 w-full rounded border border-gray-500"
+          required>
+        <textarea placeholder="Description" id="bookDescription"
+          class="p-2 w-full rounded border border-gray-500"></textarea>
+        <input type="number" placeholder="Number of Pages" id="bookPages"
+          class="p-2 w-full rounded border border-gray-500" required>
+        <label class="flex items-center space-x-3">
+          <input type="checkbox" id="bookReadStatus" class="form-checkbox h-5 w-5 text-blue-600 border-gray-500">
+          <span>Read?</span>
+        </label>
+        <div class="flex justify-end space-x-4">
+          <button type="button" id="closeModalBtn"
+            class="bg-gray-400 py-2 px-4 rounded hover:bg-gray-500 text-white">Cancel</button>
+          <button type="submit" class="bg-blue-600 py-2 px-4 rounded hover:bg-blue-700 text-white">Add Book</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <script src="scripts/main.js"></script>
 </body>
 
