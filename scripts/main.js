@@ -29,23 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   addBookForm.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      // Get form values
       const title = document.getElementById('bookTitle').value;
       const author = document.getElementById('bookAuthor').value;
       const description = document.getElementById('bookDescription').value;
       const pages = document.getElementById('bookPages').value;
       const isRead = document.getElementById('bookReadStatus').checked;
-
-      // Create new Book
       const book = new Book(title, author, description, pages, isRead);
 
-      // Display book
       displayBook(book);
-
       // Save to localStorage
       saveBook(book);
-
       // Clear form & close modal
       addBookForm.reset();
       modal.classList.add('hidden');
