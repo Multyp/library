@@ -50,28 +50,32 @@
 
   <!-- Modal for Adding -->
   <div id="modal"
-    class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 hidden">
-    <div class="bg-white rounded-lg p-6 w-11/12 md:w-3/4 lg:w-1/2 text-black">
-      <h2 class="text-2xl mb-4 font-bold">+ Add a Book</h2>
-      <form id="addBookForm" class="space-y-4">
-        <input type="text" placeholder="Title" id="bookTitle" class="p-2 w-full rounded border border-gray-500"
-          required>
-        <input type="text" placeholder="Author" id="bookAuthor" class="p-2 w-full rounded border border-gray-500"
-          required>
-        <textarea placeholder="Description" id="bookDescription"
-          class="p-2 w-full rounded border border-gray-500"></textarea>
-        <input type="number" placeholder="Number of Pages" id="bookPages"
-          class="p-2 w-full rounded border border-gray-500" required>
-        <label class="flex items-center space-x-3">
-          <input type="checkbox" id="bookReadStatus" class="form-checkbox h-5 w-5 text-blue-600 border-gray-500">
-          <span>Read?</span>
-        </label>
-        <div class="flex justify-end space-x-4">
-          <button type="button" id="closeModalBtn"
-            class="bg-gray-400 py-2 px-4 rounded hover:bg-gray-500 text-white">Cancel</button>
-          <button type="submit" class="bg-blue-600 py-2 px-4 rounded hover:bg-blue-700 text-white">Add Book</button>
-        </div>
-      </form>
+  class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 hidden">
+    <div class="bg-gray-800 rounded-lg p-6 w-11/12 md:w-3/4 lg:w-1/2 text-gray-200">
+        <h2 class="text-2xl mb-4 font-bold">+ Add a Book</h2>
+        <form id="addBookForm" class="space-y-4">
+            <input type="text" placeholder="Title" id="bookTitle"
+                class="p-2 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 placeholder-gray-400"
+                required>
+            <input type="text" placeholder="Author" id="bookAuthor"
+                class="p-2 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 placeholder-gray-400"
+                required>
+            <textarea placeholder="Description" id="bookDescription"
+                class="p-2 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 placeholder-gray-400"></textarea>
+            <input type="number" placeholder="Number of Pages" id="bookPages"
+                class="p-2 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 placeholder-gray-400"
+                required>
+            <label class="flex items-center space-x-3">
+                <input type="checkbox" id="bookReadStatus"
+                    class="form-checkbox h-5 w-5 text-blue-600 border border-gray-600 bg-gray-700">
+                <span>Read?</span>
+            </label>
+            <div class="flex justify-end space-x-4">
+                <button type="button" id="closeModalBtn"
+                    class="bg-gray-700 py-2 px-4 rounded hover:bg-gray-600 text-gray-200">Cancel</button>
+                <button type="submit" class="bg-blue-700 py-2 px-4 rounded hover:bg-blue-600 text-gray-200">Add Book</button>
+            </div>
+        </form>
     </div>
   </div>
 
