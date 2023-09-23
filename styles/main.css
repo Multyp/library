@@ -6,3 +6,64 @@ body {
 footer {
   height: -webkit-fill-available;
 }
+
+/* Light theme styles */
+body.light-theme {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+body.light-theme header {
+  background-color: #e0e0e0;
+}
+
+body.light-theme #modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.light-theme .bg-gray-800 {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+body.light-theme .text-gray-400 {
+  color: #888;
+}
+
+body.light-theme .text-gray-500 {
+  color: #666;
+}
+
+body.light-theme .text-gray-200 {
+  color: #333;
+}
+
+body.light-theme .bg-gray-700:hover {
+  filter: brightness(0.9);
+}
+
+body.light-theme .bg-gray-700 {
+  background-color: #ddd;
+}
+
+body.light-theme .bg-gray-700,
+body.light-theme .border-gray-600 {
+  border-color: #ccc;
+}
+
+body.light-theme .delete,
+body.light-theme .edit {
+  color: #fff;
+}
+
+body.light-theme .delete {
+  background-color: rgb(239 68 68);
+}
+
+body.light-theme .edit {
+  background-color: rgb(59 130 246);
+}
+
+body.light-theme .bg-gray-700 {
+  color: #333;
+}

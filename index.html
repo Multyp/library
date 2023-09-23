@@ -20,12 +20,14 @@
 
   <!-- Header -->
   <header class="bg-gray-800 py-6 px-8 flex-shrink-0 shadow-md">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-4xl font-extrabold tracking-wide">Library</h1>
-      <button id="openModalBtn"
-        class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">+ Add Book</button>
+    <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+      <h1 class="text-4xl font-extrabold tracking-wide mb-4 sm:mb-0">Library</h1>
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+        <button id="toggleThemeBtn" class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">Toggle Theme</button>
+        <button id="openModalBtn" class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">+ Add Book</button>
+      </div>
     </div>
-  </header>
+  </header>  
 
   <!-- Main Content -->
   <main class="flex-1 overflow-y-auto px-8 py-6">

@@ -18,7 +18,7 @@ class Library {
 
     this.addBookForm.addEventListener('submit', (e) => this.handleFormSubmit(e));
   }
-  
+
   handleFormSubmit(e) {
     e.preventDefault();
 
@@ -48,20 +48,25 @@ class Library {
     bookDiv.classList.add('bg-gray-800', 'p-6', 'rounded-lg', 'shadow-sm', 'transition-transform', 'transform', 'hover:scale-105');
     bookDiv.id = (book.id);
     bookDiv.innerHTML = `
-          <h3 class="text-2xl mb-1 font-semibold">${book.title}</h3>
-          <p class="text-gray-400 mb-2 italic">By ${book.author}</p>
-          <p class="text-gray-500 mb-4">${book.description}</p>
-          <div class="flex justify-between items-center mt-4">
-              <div>
-                  <p><span class="text-gray-400">Pages:</span> ${book.pages}</p>
-                  <p><span class="text-gray-400">Read:</span> ${book.isRead ? 'Yes' : 'No'}</p>
-              </div>
-              <div class="flex space-x-2">
-                <button class="edit bg-blue-700 text-gray-200 px-3 py-1 rounded hover:bg-blue-600 transition duration-300">Edit</button>
-                <button class="delete bg-red-700 text-gray-200 px-3 py-1 rounded hover:bg-red-600 transition duration-300">Delete</button>
+          <div class="flex justify-center items-center border-b border-gray-700 pb-4">
+              <h3 class="text-2xl font-semibold">${book.title}</h3>
+          </div>
+          <div class="py-4">
+              <p class="text-gray-400 mb-2 italic text-center">By ${book.author}</p>
+              <p class="text-gray-500 mb-4 px-4">${book.description}</p>
+              <div class="flex justify-between items-center mt-4 px-4">
+                  <div>
+                      <p><span class="text-gray-400">Pages:</span> ${book.pages}</p>
+                      <p><span class="text-gray-400">Read:</span> ${book.isRead ? 'Yes' : 'No'}</p>
+                  </div>
               </div>
           </div>
-      `;
+          <div class="flex justify-end space-x-2 border-t border-gray-700 pt-4">
+              <button class="edit bg-blue-700 text-gray-200 px-3 py-1 rounded hover:bg-blue-600 transition duration-300">Edit</button>
+              <button class="delete bg-red-700 text-gray-200 px-3 py-1 rounded hover:bg-red-600 transition duration-300">Delete</button>
+          </div>
+    `;
+
 
     booksContainer.appendChild(bookDiv);
 
