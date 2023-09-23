@@ -11,6 +11,9 @@
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
 
+  <!-- FontAwesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   <!-- Specific css -->
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="styles/light-theme.css" />
@@ -29,11 +32,15 @@
     <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
       <h1 class="text-4xl font-extrabold tracking-wide mb-4 sm:mb-0">Library</h1>
       <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-        <button id="toggleThemeBtn" class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">Toggle Theme</button>
-        <button id="openModalBtn" class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">+ Add Book</button>
+        <button id="toggleThemeBtn" class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">
+          <i id="themeIcon" class="fas mr-2"></i>Toggle Theme
+        </button>
+        <button id="openModalBtn" class="bg-gray-700 py-2 px-6 rounded-lg hover:bg-gray-600 transition duration-300 shadow-sm">
+          <i class="fas fa-plus mr-2"></i>Add Book
+        </button>
       </div>
     </div>
-  </header>  
+  </header>
 
   <!-- Main Content -->
   <main class="flex-1 overflow-y-auto px-8 py-6">
@@ -49,7 +56,10 @@
   <div id="modal"
   class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 hidden">
     <div class="bg-gray-800 rounded-lg p-6 w-11/12 md:w-3/4 lg:w-1/2 text-gray-200">
-        <h2 class="text-2xl mb-4 font-bold">+ Add a Book</h2>
+        <h2 class="text-2xl mb-4 font-bold">
+          <i class="fas fa-plus mr-2"></i>
+          Add Book
+        </h2>
         <form id="addBookForm" class="space-y-4">
             <input type="text" placeholder="Title" id="bookTitle"
                 class="p-2 w-full rounded bg-gray-700 text-gray-200 border border-gray-600 placeholder-gray-400"

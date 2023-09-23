@@ -62,8 +62,8 @@ class Library {
               </div>
           </div>
           <div class="flex justify-end space-x-2 border-t border-gray-700 pt-4">
-              <button class="edit bg-blue-700 text-gray-200 px-3 py-1 rounded hover:bg-blue-600 transition duration-300">Edit</button>
-              <button class="delete bg-red-700 text-gray-200 px-3 py-1 rounded hover:bg-red-600 transition duration-300">Delete</button>
+              <button class="edit bg-blue-700 text-gray-200 px-3 py-1 rounded hover:bg-blue-400 transition duration-300">Edit</button>
+              <button class="delete bg-red-700 text-gray-200 px-3 py-1 rounded hover:bg-red-400 transition duration-300">Delete</button>
           </div>
     `;
 
