@@ -12,7 +12,7 @@ body.light-theme #modal {
 }
 
 body.light-theme .bg-gray-800 {
-  background-color: #fff;
+  background-color: #f4f4f4;
   border: 1px solid #ddd;
 }
 
@@ -43,7 +43,7 @@ body.light-theme .border-gray-600 {
 
 body.light-theme .delete,
 body.light-theme .edit {
-  color: #fff;
+  color: #f4f4f4;
 }
 
 body.light-theme .delete {
@@ -64,5 +64,9 @@ body.light-theme .edit:hover {
 
 body.light-theme input.bg-gray-700,
 body.light-theme textarea.bg-gray-700 {
-  background-color: #fff;
+  background-color: #f4f4f4;
+}
+
+body.light-theme #AddBookBtn {
+  color: #f4f4f4;
 }
