@@ -71,3 +71,7 @@ body.light-theme textarea.bg-gray-700 {
 body.light-theme #AddBookBtn {
   color: #f4f4f4;
 }
+
+body.light-theme #closeInstructionsBtn:hover {
+  color: red;
+}

@@ -18,17 +18,27 @@ class Tutorial {
     });
 
     this.prevSlideBtn.addEventListener('click', () => {
-      this.currentSlide = Math.max(this.currentSlide - 1, 0);
-      this.showSlide(this.currentSlide);
+      if (this.currentSlide > 0) {
+        this.currentSlide = Math.max(this.currentSlide - 1, 0);
+        this.showSlide(this.currentSlide);
+      }
     });
 
     this.nextSlideBtn.addEventListener('click', () => {
-      this.currentSlide = Math.min(this.currentSlide + 1, this.carousel.childElementCount - 1);
-      this.showSlide(this.currentSlide);
+      if (this.currentSlide < this.carousel.childElementCount - 1) {
+        this.currentSlide = Math.min(this.currentSlide + 1, this.carousel.childElementCount - 1);
+        this.showSlide(this.currentSlide);
+      }
     });
 
     this.updateHowTo();
     this.observeThemeChanges();
+    this.updateButtonVisibility();
+  }
+
+  updateButtonVisibility() {
+    this.prevSlideBtn.style.visibility = this.currentSlide === 0 ? 'hidden' : 'visible';
+    this.nextSlideBtn.style.visibility = this.currentSlide === this.carousel.childElementCount - 1 ? 'hidden' : 'visible';
   }
 
   showSlide(slideIndex) {
@@ -40,6 +50,7 @@ class Tutorial {
         slide.style.display = 'none';
       }
     });
+    this.updateButtonVisibility();
   }
 
   updateHowTo() {

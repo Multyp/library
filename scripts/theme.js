@@ -11,9 +11,10 @@ class ThemeSwitcher {
   init() {
     if (this.savedTheme) {
       this.body.classList.add(this.savedTheme);
-      if (this.themeIcon) {
-        this.updateThemeIcon(this.savedTheme);
-      }
+    }
+
+    if (this.themeIcon) {
+      this.updateThemeIcon(this.savedTheme);
     }
 
     this.toggleThemeBtn.addEventListener('click', () => {
@@ -40,12 +41,12 @@ class ThemeSwitcher {
   }
 
   updateThemeIcon(theme) {
-    if (theme === 'dark-theme') {
-      this.themeIcon.classList.remove('fa-sun');
-      this.themeIcon.classList.add('fa-moon');
-    } else {
+    if (theme === 'light-theme') {
       this.themeIcon.classList.remove('fa-moon');
       this.themeIcon.classList.add('fa-sun');
+    } else {
+      this.themeIcon.classList.remove('fa-sun');
+      this.themeIcon.classList.add('fa-moon');
     }
   }
 }
