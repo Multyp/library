@@ -3,17 +3,18 @@ body.light-theme {
   color: #333;
 }
 
-body.light-theme header {
-  background-color: #e0e0e0;
-}
-
 body.light-theme #modal {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 body.light-theme .bg-gray-800 {
   background-color: #f4f4f4;
-  border: 1px solid #ddd;
+  border: 1px solid #999;
+}
+
+body.light-theme header.bg-gray-800 {
+  border: none;
+  border-bottom: 1px solid #999;
 }
 
 body.light-theme .text-gray-400 {
